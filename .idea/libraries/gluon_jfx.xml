@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="gluon-jfx">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/scoop/apps/gluon-openjfx-sdk/current" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/scoop/apps/gluon-openjfx-sdk/current" recursive="false" type="SOURCES" />
+  </library>
+</component>
