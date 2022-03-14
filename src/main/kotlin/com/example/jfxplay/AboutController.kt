@@ -12,7 +12,7 @@ fun Long.toTimeString() =
     if(this < 0) {
         "0:0:0"
     }else{
-        "${this/3600}:${this/60%3600}:${this%60}"
+        "${this/3600}:${this/60%60}:${this%60}"
     }
 
 
