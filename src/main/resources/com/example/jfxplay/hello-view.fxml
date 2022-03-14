@@ -4,27 +4,14 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="TOP_CENTER" prefHeight="492.0" prefWidth="733.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jfxplay.HelloController">
+<VBox alignment="TOP_CENTER" prefHeight="260.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jfxplay.HelloController">
    <MenuBar>
      <menus>
-       <Menu mnemonicParsing="false" text="File">
-         <items>
-           <MenuItem mnemonicParsing="false" text="Close" />
-         </items>
-       </Menu>
-       <Menu mnemonicParsing="false" text="Edit">
-         <items>
-           <MenuItem mnemonicParsing="false" text="Delete" />
-         </items>
-       </Menu>
        <Menu mnemonicParsing="false" text="Help">
          <items>
            <MenuItem mnemonicParsing="false" text="About" />
@@ -34,16 +21,16 @@
    </MenuBar>
    <TabPane prefHeight="421.0" prefWidth="693.0" tabClosingPolicy="UNAVAILABLE">
      <tabs>
-       <Tab text="1">
+       <Tab text="禅定">
          <content>
            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                   <children>
-                     <Slider fx:id="zenTimeSlider" blockIncrement="1.0" layoutX="60.0" layoutY="178.0" max="300.0" minorTickCount="0" prefHeight="37.0" prefWidth="550.0" showTickLabels="true" value="10.0" />
-                     <Button fx:id="startZenButton" layoutX="303.0" layoutY="252.0" mnemonicParsing="false" onAction="#onHelloButtonClick" text="开启禅定" />
+                     <Button fx:id="startZenButton" layoutX="156.0" layoutY="85.0" mnemonicParsing="false" onAction="#onHelloButtonClick" prefHeight="36.0" prefWidth="89.0" text="开启禅定" />
                   </children>
                </AnchorPane>
          </content>
        </Tab>
+       <!--
        <Tab text="2">
          <content>
            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
@@ -58,6 +45,7 @@
                   </children></AnchorPane>
          </content>
        </Tab>
+       -->
      </tabs>
    </TabPane>
 </VBox>

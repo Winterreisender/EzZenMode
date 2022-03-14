@@ -8,23 +8,23 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-image: &quot;background.jpg&quot;; -fx-background-color: gray;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jfxplay.AboutController">
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jfxplay.AboutController">
    <children>
       <VBox alignment="CENTER" prefHeight="1080.0" prefWidth="1920.0" spacing="32.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox fx:id="zenTimeHBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="16.0">
                <children>
-                  <Label text="禅定时间(分钟)" />
+                  <Label text="禅定时间(分钟)" textFill="WHITE" />
                   <TextField fx:id="zenTimeInput" promptText="输入时间(分钟)" />
-                  <Button fx:id="startButton" mnemonicParsing="false" onAction="#onStartButtonClicked" text="开启" />
+                  <Button fx:id="startButton" defaultButton="true" mnemonicParsing="false" onAction="#onStartButtonClicked" text="开启" />
                </children>
             </HBox>
-            <Label alignment="CENTER" text="禅定中" textAlignment="CENTER">
+            <Label alignment="CENTER" text="禅定中" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font size="50.0" />
                </font>
             </Label>
-            <Label fx:id="timeLeftLabel" text="剩余 N/A">
+            <Label fx:id="timeLeftLabel" text="剩余 N/A" textFill="WHITE">
                <font>
                   <Font size="21.0" />
                </font></Label>
