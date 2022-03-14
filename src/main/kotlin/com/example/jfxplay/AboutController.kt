@@ -8,13 +8,15 @@ import javafx.scene.control.TextField
 import javafx.scene.layout.HBox
 import java.awt.Desktop
 import java.lang.Long.parseLong
+import java.lang.System.exit
 import java.net.URI
+import kotlin.system.exitProcess
 
 fun Long.toTimeString() =
     if(this < 0) {
-        "0:0:0"
+        "00:00:00"
     }else{
-        "${this/3600}:${this/60%60}:${this%60}"
+        String.format("%02d:%02d:%02d",this/3600,this/60%60,this%60)
     }
 
 

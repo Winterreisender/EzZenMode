@@ -1,10 +1,11 @@
 package com.example.jfxplay
 
 import javafx.application.Application
+import javafx.event.EventHandler
 import javafx.fxml.FXMLLoader
 import javafx.scene.Scene
 import javafx.stage.Stage
-import javafx.stage.StageStyle
+import kotlin.system.exitProcess
 
 class AboutApplication : Application() {
 
@@ -15,6 +16,9 @@ class AboutApplication : Application() {
         stage.scene = scene
         //stage.initStyle(StageStyle.UNDECORATED)
         stage.isFullScreen = true
+        stage.onCloseRequest = EventHandler {
+            exitProcess(0)
+        }
         stage.show()
     }
 }
