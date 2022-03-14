@@ -6,6 +6,8 @@ import javafx.scene.control.TextField
 import javafx.scene.layout.HBox
 
 import javafx.stage.Stage
+import java.awt.Desktop
+import java.net.URI
 
 class HelloController {
     @FXML private lateinit var welcomeText   :TextField
@@ -34,5 +36,8 @@ class HelloController {
 
     @FXML private fun onRotateBtnClicked() {
         navigateHBox.rotate = (navigateHBox.rotate + 180) % 360
+    }
+    @FXML fun onMenuHomepageClicked(){
+        Desktop.getDesktop().browse(URI("https://gitee.com/winter_reisender/EzZenMode"))
     }
 }

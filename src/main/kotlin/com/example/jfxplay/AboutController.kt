@@ -6,7 +6,9 @@ import javafx.scene.control.Button
 import javafx.scene.control.Label
 import javafx.scene.control.TextField
 import javafx.scene.layout.HBox
+import java.awt.Desktop
 import java.lang.Long.parseLong
+import java.net.URI
 
 fun Long.toTimeString() =
     if(this < 0) {
@@ -48,4 +50,5 @@ class AboutController {
             }
         }.start()
     }
+
 }
