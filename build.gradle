@@ -52,9 +52,9 @@ test {
 }
 
 application {
-    applicationName = "JavaFXSample"
-    //mainModule.set("sample")
-    //mainClass.set("com.icuxika.MainApp")
+    applicationName = "EzZenMode"
+    mainModule.set("me.winterreisender.ezzenmode")
+    mainClass.set("me.winterreisender.ezzenmode.MainApplicationKt")
     applicationDefaultJvmArgs = [
             "-XX:+UseZGC",
             "-XX:+ShowCodeDetailsInExceptionMessages",
@@ -72,24 +72,24 @@ jlink {
     imageZip = project.file("${buildDir}/distributions/app-${javafx.platform.classifier}.zip") as RegularFile
 
     jpackage {
-        installerType = 'msi'
         outputDir = "jpackage"
-        imageName = "JavaFXSample"
+        imageName = "EzZenMode"
         skipInstaller = false
         installerName = application.applicationName
-        appVersion = "1.0.0"
+        appVersion = "0.2.0"
 
         if (org.gradle.internal.os.OperatingSystem.current().windows) {
-            //icon = "src/main/resources/application.ico"
+            installerType = 'msi'
+            icon = "src/main/resources/application.ico"
             installerOptions += ["--win-dir-chooser", "--win-menu", "--win-shortcut"]
         }
         if (org.gradle.internal.os.OperatingSystem.current().macOsX) {
-            //icon = "src/main/resources/application.icns"
+            icon = "src/main/resources/application.png" // use icns file format if really build mac os version
         }
         if (org.gradle.internal.os.OperatingSystem.current().linux) {
-            //icon = "src/main/resources/application.png"
-            //installerType = "deb"
-            //installerOptions += ["--linux-deb-maintainer", "icuxika@outlook.com", "--linux-menu-group", application.applicationName, "--linux-shortcut"]
+            icon = "src/main/resources/application.png"
+            installerType = "deb"
+            installerOptions += ["--linux-deb-maintainer", "winterreisender@foxmail.com", "--linux-menu-group", application.applicationName, "--linux-shortcut"]
         }
     }
 }
