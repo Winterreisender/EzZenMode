@@ -2,13 +2,6 @@
 
 简易禅定模式,使用JavaFX开发
 
-## 注意
-
-由于历史遗留问题,文件名、模块名没有正确命名。其含义大致为:
-
-Hello: 主界面  
-About: 禅定界面
-
 ## 版权与许可
 
 Copyright 2022 Winterreisender.

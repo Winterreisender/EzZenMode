@@ -1,4 +1,4 @@
-package com.example.jfxplay
+package me.winterreisender.ezzenmode
 
 import javafx.application.Application
 import javafx.event.EventHandler
@@ -7,12 +7,12 @@ import javafx.scene.Scene
 import javafx.stage.Stage
 import kotlin.system.exitProcess
 
-class AboutApplication : Application() {
+class ZenApplication : Application() {
 
     override fun start(stage: Stage) {
-        val fxmlLoader = FXMLLoader(AboutApplication::class.java.getResource("about-view.fxml"))
+        val fxmlLoader = FXMLLoader(ZenApplication::class.java.getResource("zen-view.fxml"))
         val scene = Scene(fxmlLoader.load())
-        stage.title = "EzZenMode!"
+        stage.title = "EzZenMode"
         stage.scene = scene
         //stage.initStyle(StageStyle.UNDECORATED)
         stage.isFullScreen = true

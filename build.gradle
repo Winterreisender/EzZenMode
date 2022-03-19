@@ -27,8 +27,8 @@ tasks.withType(JavaCompile) {
 }
 
 application {
-    mainModule = 'com.example.jfxplay'
-    mainClass = 'com.example.jfxplay.HelloApplicationKt'
+    mainModule = 'me.winterreisender.ezzenmode'
+    mainClass = 'me.winterreisender.ezzenmode.MainApplicationKt'
 }
 
 [compileKotlin, compileTestKotlin].forEach {

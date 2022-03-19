@@ -1,4 +1,4 @@
-package com.example.jfxplay
+package me.winterreisender.ezzenmode
 
 import javafx.application.Platform
 import javafx.fxml.FXML
@@ -6,26 +6,21 @@ import javafx.scene.control.Button
 import javafx.scene.control.Label
 import javafx.scene.control.TextField
 import javafx.scene.layout.HBox
-import java.awt.Desktop
 import java.lang.Long.parseLong
-import java.lang.System.exit
-import java.net.URI
-import kotlin.system.exitProcess
-
-fun Long.toTimeString() =
-    if(this < 0) {
-        "00:00:00"
-    }else{
-        String.format("%02d:%02d:%02d",this/3600,this/60%60,this%60)
-    }
 
 
-class AboutController {
+class ZenController {
     @FXML private lateinit var timeLeftLabel :Label
     @FXML private lateinit var exitButton : Button
     @FXML private lateinit var startButton : Button
     @FXML private lateinit var zenTimeInput : TextField
     @FXML private lateinit var zenTimeHBox : HBox
+
+    private fun Long.toTimeString() = if(this < 0) {
+            "00:00:00"
+        }else{
+            String.format("%02d:%02d:%02d",this/3600,this/60%60,this%60)
+        }
 
     fun initialize() {
 

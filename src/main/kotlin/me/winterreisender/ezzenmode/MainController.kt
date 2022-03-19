@@ -1,7 +1,6 @@
-package com.example.jfxplay
+package me.winterreisender.ezzenmode
 
 import javafx.fxml.FXML
-import javafx.scene.control.Alert
 import javafx.scene.control.TextField
 import javafx.scene.layout.HBox
 
@@ -9,29 +8,17 @@ import javafx.stage.Stage
 import java.awt.Desktop
 import java.net.URI
 
-class HelloController {
+class MainController {
     @FXML private lateinit var welcomeText   :TextField
-    //@FXML private lateinit var webBrowser0   :WebView
     @FXML private lateinit var navigateText  :TextField
     @FXML private lateinit var navigateHBox  :HBox
 
     @FXML fun initialize() {
-        println("second")
-        //webBrowser0.engine.load("https://liulanmi.com/labs/core.html")
     }
 
-    @FXML private fun onHelloButtonClick() {
-        //welcomeText.text = "JavaFX"
-        //Alert(Alert.AlertType.CONFIRMATION).apply {
-        //    contentText = "Hello"
-        //}.showAndWait()
-        AboutApplication().start(Stage())
-
+    @FXML private fun onZenButtonClicked() {
+        ZenApplication().start(Stage())
         //navigateHBox.scene.window.hide()
-    }
-
-    @FXML private fun onNavigateBtnClicked() {
-        //webBrowser0.engine.load(navigateText.text)
     }
 
     @FXML private fun onRotateBtnClicked() {
