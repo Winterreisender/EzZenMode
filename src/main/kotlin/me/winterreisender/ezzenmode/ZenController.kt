@@ -2,6 +2,7 @@ package me.winterreisender.ezzenmode
 
 import javafx.application.Platform
 import javafx.fxml.FXML
+import javafx.scene.control.Alert
 import javafx.scene.control.Button
 import javafx.scene.control.Label
 import javafx.scene.control.TextField
@@ -31,7 +32,18 @@ class ZenController {
     }
 
     @FXML fun onStartButtonClicked() {
-        val initTimeLeft = parseLong(zenTimeInput.text) * 60
+        val initTimeLeft = kotlin.runCatching {
+            parseLong(zenTimeInput.text) * 60
+        }.fold(
+            onSuccess = {
+                it
+            },
+            onFailure = {
+                Alert(Alert.AlertType.INFORMATION,"输入错误: $it").show()
+                return@onStartButtonClicked
+            }
+        )
+
         Thread {
             Platform.runLater { zenTimeHBox.isVisible = false; }
             var timeLeft = initTimeLeft;
