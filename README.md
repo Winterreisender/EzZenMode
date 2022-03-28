@@ -2,7 +2,7 @@
 
 简易禅定模式,使用JavaFX开发
 
-![输入图片说明](screenshot.png)
+![screenshot](screenshot.png)
 
 ## 版权与许可
 
