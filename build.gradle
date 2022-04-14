@@ -110,3 +110,4 @@ shadowJar {
         attributes 'Main-Class': 'MainKt'
     }
 }
+
