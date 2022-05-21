@@ -1,4 +1,4 @@
-package me.winterreisender.ezzenmode
+package io.github.winterreisender.ezzenmode
 
 import javafx.fxml.FXML
 import javafx.stage.Stage

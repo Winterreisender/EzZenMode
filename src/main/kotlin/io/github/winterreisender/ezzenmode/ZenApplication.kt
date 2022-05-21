@@ -1,30 +1,30 @@
-package me.winterreisender.ezzenmode
+package io.github.winterreisender.ezzenmode
 
 import javafx.application.Application
-import javafx.fxml.FXMLLoader
 import javafx.event.EventHandler
+import javafx.fxml.FXMLLoader
 import javafx.scene.Scene
 import javafx.scene.image.Image
+import javafx.scene.input.KeyCombination
 import javafx.stage.Stage
 import kotlin.system.exitProcess
 
-class HelloApplication : Application() {
+class ZenApplication : Application() {
+
     override fun start(stage: Stage) {
-        val fxmlLoader = FXMLLoader(HelloApplication::class.java.getResource("main-view.fxml"))
+        val fxmlLoader = FXMLLoader(ZenApplication::class.java.getResource("zen-view.fxml"))
         stage.apply {
             scene = Scene(fxmlLoader.load())
 
             title = "EzZenMode"
             icons.add(Image("application.png"))
-
+            isFullScreen = true
+            fullScreenExitHint = ""
+            fullScreenExitKeyCombination = KeyCombination.NO_MATCH
             onCloseRequest = EventHandler {
                 exitProcess(0)
             }
         }
         stage.show()
     }
-}
-
-fun main() {
-    Application.launch(HelloApplication::class.java)
 }
