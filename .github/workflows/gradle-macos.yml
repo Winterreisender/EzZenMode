@@ -24,21 +24,21 @@ jobs:
               with:
                   gradle-version: 7.4.1
 
-            - name: packageUberJarForCurrentOS with Gradle
+            - name: shadowJar with Gradle
               uses: gradle/gradle-build-action@v2
               with:
-                  arguments: packageUberJarForCurrentOS
+                  arguments: shadowJar
 
-            - name: packageDmg with Gradle
+            - name: jpackage with Gradle
               uses: gradle/gradle-build-action@v2
               with:
-                  arguments: packageDmg
+                  arguments: jpackage
 
             - name: Copy Jars to Staging
-              run: mkdir staging && cp -r build/compose/jars/*.jar staging/
+              run: mkdir staging && cp -r build/libs/*-all.jar staging/
 
-            - name: Copy Dmgs to Staging
-              run: cp -r build/compose/binaries/main/dmg/*.dmg staging/
+            - name: Copy Installer to Staging
+              run: cp -r build/jpackage/*.dmg staging/
 
             - name: Upload
               uses: actions/upload-artifact@v2

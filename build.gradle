@@ -8,7 +8,7 @@ plugins {
     id "com.gluonhq.gluonfx-gradle-plugin" version "1.0.12"
 }
 
-group 'com.example'
+group 'me.winterreisender.ezzenmode'
 version '1-SNAPSHOT'
 
 repositories {
