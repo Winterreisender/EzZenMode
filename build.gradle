@@ -8,7 +8,7 @@ plugins {
     id "com.gluonhq.gluonfx-gradle-plugin" version "1.0.12"
 }
 
-group 'me.winterreisender.ezzenmode'
+group 'io.github.winterreisender.ezzenmode'
 version '1-SNAPSHOT'
 
 repositories {
@@ -27,8 +27,8 @@ tasks.withType(JavaCompile) {
 }
 
 application {
-    mainModule = 'me.winterreisender.ezzenmode'
-    mainClass = 'me.winterreisender.ezzenmode.MainApplicationKt'
+    mainModule = 'io.github.winterreisender.ezzenmode'
+    mainClass = 'io.github.winterreisender.ezzenmode.MainApplicationKt'
 }
 
 [compileKotlin, compileTestKotlin].forEach {
@@ -53,8 +53,8 @@ test {
 
 application {
     applicationName = "EzZenMode"
-    mainModule.set("me.winterreisender.ezzenmode")
-    mainClass.set("me.winterreisender.ezzenmode.MainApplicationKt")
+    mainModule.set("io.github.winterreisender.ezzenmode")
+    mainClass.set("io.github.winterreisender.ezzenmode.MainApplicationKt")
     applicationDefaultJvmArgs = [
             "-XX:+UseZGC",
             "-XX:+ShowCodeDetailsInExceptionMessages",
