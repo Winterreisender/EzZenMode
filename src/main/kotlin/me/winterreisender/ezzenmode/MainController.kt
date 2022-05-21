@@ -16,6 +16,6 @@ class MainController {
     }
 
     @FXML fun onMenuHomepageClicked(){
-        Desktop.getDesktop().browse(URI("https://gitee.com/winter_reisender/EzZenMode"))
+        Desktop.getDesktop().browse(URI("https://github.com/Winterreisender/EzZenmode"))
     }
 }
