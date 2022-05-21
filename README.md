@@ -1,5 +1,18 @@
 # EzZenMode
 
+
+![GitHub top language](https://img.shields.io/github/languages/top/Winterreisender/EzZenmode?color=b99bf8&logo=kotlin)
+![Java](https://img.shields.io/badge/Java-17-orange?logo=java)
+![platforms](https://img.shields.io/badge/platform-windows%20%7C%20linux%20%7C%20macos-blue)
+![language](https://img.shields.io/badge/languages-%E4%B8%AD%E6%96%87-red)
+![license](https://img.shields.io/github/license/Winterreisender/EzZenmode?color=663366)
+
+[![Gradle CI Windows](https://github.com/Winterreisender/EzZenmode/actions/workflows/gradle-windows.yml/badge.svg)](https://github.com/Winterreisender/EzZenmode/actions/workflows/gradle-windows.yml)
+[![Gradle CI Linux](https://github.com/Winterreisender/EzZenmode/actions/workflows/gradle-linux.yml/badge.svg)](https://github.com/Winterreisender/EzZenmode/actions/workflows/gradle-linux.yml)
+[![Gradle CI MacOS](https://github.com/Winterreisender/EzZenmode/actions/workflows/gradle-macos.yml/badge.svg)](https://github.com/Winterreisender/EzZenmode/actions/workflows/gradle-macos.yml)
+![GitHub last commit](https://img.shields.io/github/last-commit/Winterreisender/EzZenmode)
+
+
 简易禅定模式,使用JavaFX开发
 
 ![screenshot](screenshot.png)
